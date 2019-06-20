@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Check Splitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div id="main-card">
+                <h2>Cost Splitter</h2>
+                <hr>
+      <form id="myform">
+              <table align="left" id="mainTable">
+                  <div class ="userinput">
+                  <tr> <td><label>Total Amount:</label></td><td><input class="input-field userInput" type="number" id="total" placeholder="Enter Amount"  /> </td> </tr>
+                  <tr> <td><label>Party Number:</label></td><td> <input class="input-field userInput" id="party" type="number" placeholder="Party Number"   /> </td> </tr>
+                  <tr> <td><label>Gratuity:</label></td><td> <input class="input-field" id="gratuity" type="number" placeholder="Recommended" /> </td> </tr>
+                 </div>
+              </table> 
+      </form>
+      <div class="custom-select" style="width:300px;">
+        <select id="options" name="userChoice" required >
+          <option value="0">Select Method</option>
+          <option value="1" >Evenly</option>
+          <option value="2">Randomly</option>
+        <option value="3">Customize</option>
+       </select>
+      </div>
+    <span class="left bottom">Break The Bill, Not Your Heads.</span>
+    <input class="right bottom" id="button" type="button" value="Pay" onclick="checkData()" >
+    </div> 
+    <!-- SECOND DISPLAY CONTAINER FOR THE EVENLY AND RANDOMLY -->
+    <div id="display-data-card">
+        <h2 id='title'> </h2>
+        <hr>
+        <form id='display-check'>
+            <table align="left" id="show-data">
+                <tr>
+                <td colspan="2" >
+                <center>		
+                    <div id="numberGuest">
+                    </div> 
+                </center>
+                </td>
+                </tr>
+            </table> 
+        </form>
+        <span class="left bottom"></span>
+        <input class="right bottom" id="button" type="button" value="Previous" onclick= "goBack()">
+    </div> 
+    <div id="myModal" class="modal" >
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Customized Check</h2>
+            </div>
+            <div class="modal-body">
+                <p>Sorry! Feature Under Development</p>
+                <p>Feel Free To Use Even | Random</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Click Anywhere To Close</h3>
+            </div>
+        </div>
+    </div>
+    <!-- DISPLAY CARD FOR USER CUSTOMIZE CHECK PRICES -->
+    <!-- CUSTOMIZED VERSION FOR THIS APP IS CURRENTLY UNDER CONSTRUCTION-->
+	<!-- <div id="card-customize">
+        <h2>Customize Bill</h2>
+        <hr>
+        <p id="amount"></p>		
+         <form>
+            <table align="left" id="customize-inputs">
+                <tr>
+                <td colspan="2" >
+                <center>
+                    <div id="numberGuest"><br>
+                    </div>
+                </center>
+                </td>
+                </tr>
+            </table> 
+        </form>
+        <input type="button" id="boton2" value="Clear" onclick="clearInput()" />
+        <input type="button" id="boton" value="Calculate" onclick="newSubmit()" />
+        <input class="right3 bottom3" id="button3" type="button" value="Previous" onclick= "goBack()">
+    </div>  -->
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
